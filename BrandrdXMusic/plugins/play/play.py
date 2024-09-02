@@ -24,7 +24,8 @@ from BrandrdXMusic.utils.logger import play_logs
 from BrandrdXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
-
+@app.on_message(filters.command(["تشغيل","شغل","فيد"], "")
+)
 @app.on_message(
     filters.command(
         [
