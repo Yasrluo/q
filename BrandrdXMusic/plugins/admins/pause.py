@@ -8,7 +8,8 @@ from BrandrdXMusic.utils.decorators import AdminRightsCheck
 from BrandrdXMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
-
+@app.on_message(filters.command(["شش","دق","موقت"], "")
+)
 @app.on_message(filters.command(["pause", "cpause"]) & filters.group & ~BANNED_USERS)
 @AdminRightsCheck
 async def pause_admin(cli, message: Message, _, chat_id):
